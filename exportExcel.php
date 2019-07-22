@@ -13,29 +13,29 @@ if ($mysqli->connect_errno) {
   die("Failed to connect to MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error);
 }
 $mysqli->set_charset("utf8");
-$query = " SELECT * FROM answers ";
+$query = " SELECT * FROM answers order by id desc ";
 $res = $mysqli->query($query);
 echo '<table style="width:100%" x:str>';
 echo '  <tr>
-            <td>ID</td>
-            <td>User_Time</td>
-            <td>Q1</td>
-            <td>Detail_Q1</td>
-            <td>Q2 </td>
-            <td>Q3</td>
-            <td>Detail_Q3</td>
-            <td>Q4</td>
-            <td>Detail_Q4</td>
-            <td>Q5</td>
-            <td>Q6</td>
-            <td>Detail_Q6</td>
-            <td>Q7</td>
-            <td>Q8</td>
-            <td>Detail_Q8</td>
-            <td>Q9</td>
-            <td>Detail_Q9</td>
-            <td>Q10</td>
-            <td>Email</td>
+  <td>id</td>
+  <td>เวลาที่กรอกข้อมูล</td>
+  <td>ข้อ 1</td>
+  <td>รายละเอียดข้อ 1</td>
+  <td>ข้อ 2</td>
+  <td>ข้อ 3</td>
+  <td>รายละเอียดข้อ 3</td>
+  <td>ข้อ 4</td>
+  <td>รายละเอียดข้อ 4</td>
+  <td>ข้อ 5</td>
+  <td>ข้อ 6</td>
+  <td>รายละเอียดข้อ 6</td>
+  <td>ข้อ 7</td>
+  <td>ข้อ 8</td>
+  <td>รายละเอียดข้อ 8</td>
+  <td>ข้อ 9</td>
+  <td>รายละเอียดข้อ 9</td>
+  <td>ข้อ 10</td>
+  <td>Email</td>
         </tr>';
 while ($row = $res->fetch_array()) {
   echo '<tr>
