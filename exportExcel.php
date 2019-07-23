@@ -8,13 +8,13 @@ echo '<html xmlns:o="urn:schemas-microsoft-com:office:office"xmlns:x="urn:schema
 
 //ทำการดึงข้อมูลจาก Database
 //Connect DB
-$mysqli = new mysqli('localhost', 'root', '', 'loga_survey');
-if ($mysqli->connect_errno) {
-  die("Failed to connect to MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error);
+include('config.php');
+if ($conn->connect_errno) {
+  die("Failed to connect to MySQL : (" . $conn->connect_errno . ") " . $conn->connect_error);
 }
-$mysqli->set_charset("utf8");
+$conn->set_charset("utf8");
 $query = " SELECT * FROM answers order by id desc ";
-$res = $mysqli->query($query);
+$res = $conn->query($query);
 echo '<table style="width:100%" x:str>';
 echo '  <tr>
   <td>id</td>
