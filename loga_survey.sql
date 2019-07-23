@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 22, 2019 at 08:56 AM
+-- Generation Time: Jul 23, 2019 at 03:15 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -1080,14 +1080,15 @@ CREATE TABLE IF NOT EXISTS `member` (
   `pass` varchar(20) NOT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'admin',
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `member`
 --
 
 INSERT INTO `member` (`user_id`, `username`, `pass`, `status`) VALUES
-(1, 'admin', 'admin@survey', 'admin');
+(1, 'admin', 'admin@survey', 'admin'),
+(4, 'sdiadmin', 'mis@Pass01', 'admin');
 
 -- --------------------------------------------------------
 
